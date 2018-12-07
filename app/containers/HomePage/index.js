@@ -9,17 +9,18 @@
  * the linting exception.
  */
 
-import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import messages from './messages';
+import React, { Fragment } from 'react';
+import CommonHeader from '../../components/CommonHeader';
+import SignInCard from '../../components/SignInCard';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class HomePage extends React.PureComponent {
   render() {
     return (
-      <h1>
-        <FormattedMessage {...messages.header} />
-      </h1>
+      <Fragment>
+        <CommonHeader title="Sign in" />
+        <SignInCard />
+      </Fragment>
     );
   }
 }
