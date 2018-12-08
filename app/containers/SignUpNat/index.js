@@ -11,15 +11,15 @@
 
 import React, { Fragment } from 'react';
 import CommonHeader from '../../components/CommonHeader';
-import SignUpNextCard from '../../components/SignUpNext';
+import SignUpNatCard from '../../components/SignUpNatCard';
 
 /* eslint-disable react/prefer-stateless-function */
-export default class SignUpNext extends React.PureComponent {
+export default class SignUpNat extends React.PureComponent {
   render() {
     return (
       <Fragment>
         <CommonHeader title="Sign up" />
-        <SignUpNextCard />
+        <SignUpNatCard />
       </Fragment>
     );
   }

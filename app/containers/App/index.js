@@ -12,6 +12,9 @@ import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
 import SignUp from 'containers/SignUp/Loadable';
+import SignUpNext from 'containers/SignUpNext/Loadable';
+import SignUpNat from 'containers/SignUpNat/Loadable';
+import SignUpForm from 'containers/SignUpForm/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import ResetPassword from 'containers/ResetPassword';
 
@@ -32,6 +35,9 @@ export default function App() {
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/sign-up" component={SignUp} />
+              <Route exact path="/sign-up-next" component={SignUpNext} />
+              <Route exact path="/sign-up-nat" component={SignUpNat} />
+              <Route exact path="/sign-up-form" component={SignUpForm} />
               <Route path="/forgot-password" component={ForgotPassword} />
               <Route path="/reset-password/:email" component={ResetPassword} />
               <Route component={NotFoundPage} />
