@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Card } from '@material-ui/core';
 import Form from '../ui/Form';
 import ThemedButton from '../ui/ThemedButton';
@@ -32,7 +33,12 @@ const SignInCard = props => (
       />
       <ThemedButton bg title="Sign In" />
       <ThemedButton outlined title="I'm new to Nova" />
-      <ThemedButton link title="Forgot Password" />
+      <ThemedButton
+        link
+        title="Forgot Password"
+        component={Link}
+        to="/forgot-password"
+      />
     </Form>
   </Card>
 );

@@ -16,14 +16,10 @@ const styles = theme => ({
 const ThemedIconButton = props => {
   const { back, onClick, icon } = props;
   const handleClick = () => {
-    props.history.goBack();
+    back && props.history.goBack();
     onClick && onClick();
   };
-  return (
-    <IconButton onClick={back ? handleClick() : onClick && onClick()}>
-      {icon}
-    </IconButton>
-  );
+  return <IconButton onClick={() => handleClick()}>{icon}</IconButton>;
 };
 
 export default withStyles(styles)(withRouter(ThemedIconButton));

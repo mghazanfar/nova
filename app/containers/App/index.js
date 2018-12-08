@@ -14,7 +14,7 @@ import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 import { Grid } from '@material-ui/core';
-import GlobalStyle from '../../global-styles';
+import ForgotPassword from '../ForgotPassword';
 import AppbarComponent from '../../components/Appbar';
 import Footer from '../../components/CommonFooter';
 import { AppWrapper } from './App.style';
@@ -29,7 +29,8 @@ export default function App() {
           <Grid item xs={12} md={4}>
             <Switch>
               <Route exact path="/" component={HomePage} />
-              <Route component={NotFoundPage} />
+              <Route path="/forgot-password" component={ForgotPassword} />
+              {/* <Route component={NotFoundPage} /> */}
             </Switch>
           </Grid>
         </Grid>

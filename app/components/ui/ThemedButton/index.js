@@ -31,6 +31,7 @@ function FloatingActionButtons(props) {
         color: (outlined || link) && '#FF8E53',
         boxShadow: (outlined || link) && '0 3px 5px 2px rgba(0,0,0,0)',
       }}
+      {...props}
     >
       {title}
     </Fab>
@@ -40,6 +41,7 @@ function FloatingActionButtons(props) {
         color: '#FF8E53',
         borderRadius: 24,
       }}
+      {...props}
     >
       {title}
     </Button>
