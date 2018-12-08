@@ -59,8 +59,8 @@ class Input extends React.PureComponent {
         }}
         label={label}
         variant="outlined"
-        type={type}
         {...this.props}
+        type={type}
       />
     );
   }

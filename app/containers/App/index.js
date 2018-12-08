@@ -11,6 +11,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
+import SignUp from 'containers/SignUp/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import ResetPassword from 'containers/ResetPassword';
 
@@ -30,6 +31,7 @@ export default function App() {
           <Grid item xs={12} md={4}>
             <Switch>
               <Route exact path="/" component={HomePage} />
+              <Route exact path="/sign-up" component={SignUp} />
               <Route path="/forgot-password" component={ForgotPassword} />
               <Route path="/reset-password/:email" component={ResetPassword} />
               <Route component={NotFoundPage} />
