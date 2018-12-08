@@ -8,9 +8,12 @@ const styles = theme => ({
     display: 'flex',
     flexWrap: 'wrap',
   },
-  textField: {
-    width: '100%',
+  cssLabel: {
+    '&$cssFocused': {
+      color: '#f68a71',
+    },
   },
+  cssFocused: {},
 });
 
 function DatePickers(props) {
@@ -22,10 +25,14 @@ function DatePickers(props) {
         id="date"
         label="Date of birth"
         type="date"
-        className={classes.textField}
         InputLabelProps={{
           shrink: true,
+          classes: {
+            root: classes.cssLabel,
+            focused: classes.cssFocused,
+          },
         }}
+        style={{ width: '100%' }}
       />
     </form>
   );

@@ -5,6 +5,7 @@ import Form from '../ui/Form';
 import ThemedButton from '../ui/ThemedButton';
 import Input from '../ui/Input';
 import DatePicker from '../ui/DatePicker';
+import PhoneInput from '../ui/PhoneInput';
 
 const SignUpForm = props => (
   <Card
@@ -21,7 +22,7 @@ const SignUpForm = props => (
       <Input label="Middle Name" />
       <Input label="Last Name" />
       <DatePicker />
-      <Input label="Phone" />
+      <PhoneInput />
       <Input label="Nationality" />
       <Input label="Company Name" />
       <Input label="Role in company" />
