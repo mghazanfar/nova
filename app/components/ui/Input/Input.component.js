@@ -28,7 +28,8 @@ class Input extends React.PureComponent {
     this.state = { type: this.props.type };
   }
 
-  toggleInputType = e => {
+  toggleInputType = () => {
+    // eslint-disable-next-line react/no-access-state-in-setstate
     this.setState({ type: this.state.type === 'text' ? 'password' : 'text' });
   };
 
@@ -46,7 +47,7 @@ class Input extends React.PureComponent {
         }}
         InputProps={{
           endAdornment: showHide && (
-            <PinkPointer onClick={e => this.toggleInputType(e)}>
+            <PinkPointer onClick={() => this.toggleInputType()}>
               {type === 'password' ? 'Show' : 'Hide'}
             </PinkPointer>
           ),
@@ -59,6 +60,7 @@ class Input extends React.PureComponent {
         label={label}
         variant="outlined"
         type={type}
+        {...this.props}
       />
     );
   }

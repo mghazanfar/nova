@@ -12,6 +12,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import ResetPassword from 'containers/ResetPassword';
 
 import { Grid } from '@material-ui/core';
 import ForgotPassword from '../ForgotPassword';
@@ -30,7 +31,8 @@ export default function App() {
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route path="/forgot-password" component={ForgotPassword} />
-              {/* <Route component={NotFoundPage} /> */}
+              <Route path="/reset-password/:email" component={ResetPassword} />
+              <Route component={NotFoundPage} />
             </Switch>
           </Grid>
         </Grid>
