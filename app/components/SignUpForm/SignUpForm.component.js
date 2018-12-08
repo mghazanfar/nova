@@ -4,6 +4,7 @@ import { Card } from '@material-ui/core';
 import Form from '../ui/Form';
 import ThemedButton from '../ui/ThemedButton';
 import Input from '../ui/Input';
+import DatePicker from '../ui/DatePicker';
 
 const SignUpForm = props => (
   <Card
@@ -16,10 +17,10 @@ const SignUpForm = props => (
     }}
   >
     <Form>
-      <Input label="First Name" />
+      <Input label="First Name" style={{ marginTop: 16, marginBottom: 16 }} />
       <Input label="Middle Name" />
       <Input label="Last Name" />
-      <Input label="Date of birth" />
+      <DatePicker />
       <Input label="Phone" />
       <Input label="Nationality" />
       <Input label="Company Name" />
