@@ -16,20 +16,25 @@ import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import { Grid } from '@material-ui/core';
 import GlobalStyle from '../../global-styles';
 import AppbarComponent from '../../components/Appbar';
+import Footer from '../../components/CommonFooter';
+import { AppWrapper } from './App.style';
+import { Flex1 } from '../../components/ui/ResponsiveRelated';
 
 export default function App() {
   return (
-    <div>
+    <AppWrapper>
       <AppbarComponent />
-      <Grid container justify="center">
-        <Grid item xs={12} md={4}>
-          <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route component={NotFoundPage} />
-          </Switch>
+      <Flex1>
+        <Grid container justify="center">
+          <Grid item xs={12} md={4}>
+            <Switch>
+              <Route exact path="/" component={HomePage} />
+              <Route component={NotFoundPage} />
+            </Switch>
+          </Grid>
         </Grid>
-      </Grid>
-      <GlobalStyle />
-    </div>
+      </Flex1>
+      <Footer />
+    </AppWrapper>
   );
 }
