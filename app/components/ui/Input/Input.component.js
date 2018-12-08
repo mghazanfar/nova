@@ -1,5 +1,6 @@
 import React from 'react';
 import { TextField, withStyles } from '@material-ui/core';
+import PinkPointer from '../PinkPointer';
 
 const styles = theme => ({
   cssLabel: {
@@ -21,29 +22,46 @@ const styles = theme => ({
   notchedOutline: {},
 });
 
-const Input = props => {
-  const { classes, label } = props;
-  return (
-    <TextField
-      style={{ marginBottom: 16 }}
-      InputLabelProps={{
-        classes: {
-          root: classes.cssLabel,
-          focused: classes.cssFocused,
-        },
-      }}
-      InputProps={{
-        classes: {
-          root: classes.cssOutlinedInput,
-          focused: classes.cssFocused,
-          notchedOutline: classes.notchedOutline,
-        },
-      }}
-      label={label}
-      variant="outlined"
-      id="custom-css-outlined-input"
-    />
-  );
-};
+class Input extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = { type: this.props.type };
+  }
+
+  toggleInputType = e => {
+    this.setState({ type: this.state.type === 'text' ? 'password' : 'text' });
+  };
+
+  render() {
+    const { classes, label, showHide } = this.props;
+    const { type } = this.state;
+    return (
+      <TextField
+        style={{ marginBottom: 16 }}
+        InputLabelProps={{
+          classes: {
+            root: classes.cssLabel,
+            focused: classes.cssFocused,
+          },
+        }}
+        InputProps={{
+          endAdornment: showHide && (
+            <PinkPointer onClick={e => this.toggleInputType(e)}>
+              {type === 'password' ? 'Show' : 'Hide'}
+            </PinkPointer>
+          ),
+          classes: {
+            root: classes.cssOutlinedInput,
+            focused: classes.cssFocused,
+            notchedOutline: classes.notchedOutline,
+          },
+        }}
+        label={label}
+        variant="outlined"
+        type={type}
+      />
+    );
+  }
+}
 
 export default withStyles(styles)(Input);

@@ -4,6 +4,8 @@ import Form from '../ui/Form';
 import ThemedButton from '../ui/ThemedButton';
 import ThemedCheckBox from '../ui/ThemedCheckBox';
 import Input from '../ui/Input';
+import Label from '../ui/Label';
+import ThemedLink from '../ui/Label/ThemedLink';
 
 const SignInCard = props => (
   <Card
@@ -17,11 +19,20 @@ const SignInCard = props => (
   >
     <Form>
       <Input label="Email" />
-      <Input label="Password" />
-      <ThemedCheckBox label="By singing in, I agree,By singing in, I agree.." />
-      <ThemedButton title="Sign In" />
-      <ThemedButton title="I'm new to Nova" />
-      <ThemedButton title="Forgot Password" />
+      <Input label="Password" showHide type="password" />
+      <ThemedCheckBox
+        label={
+          <Label>
+            By agreeing you conform the{' '}
+            <ThemedLink to="/">Nova Policy</ThemedLink> and{' '}
+            <ThemedLink to="/">privacy agreement</ThemedLink> of data,{' '}
+            <ThemedLink to="/">terms and conditions</ThemedLink>.
+          </Label>
+        }
+      />
+      <ThemedButton bg title="Sign In" />
+      <ThemedButton outlined title="I'm new to Nova" />
+      <ThemedButton link title="Forgot Password" />
     </Form>
   </Card>
 );
