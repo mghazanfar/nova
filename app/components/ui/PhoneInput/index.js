@@ -76,6 +76,7 @@ class OutlinedTextFields extends React.Component {
           placeholder="Phone number"
           mb0
           style={{ width: '78%' }}
+          type="number"
         />
       </form>
     );
