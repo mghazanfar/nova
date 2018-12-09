@@ -1,9 +1,10 @@
 import React from 'react';
-import { Card, Typography } from '@material-ui/core';
+import { Card } from '@material-ui/core';
 import { Link, withRouter } from 'react-router-dom';
 import ReactCodeInput from 'react-code-input';
 import Form from '../ui/Form';
 import ThemedButton from '../ui/ThemedButton';
+import { CardTitle } from '../ui/Texts';
 import { Center } from '../ui/ResponsiveRelated';
 const props = {
   inputStyle: {
@@ -47,10 +48,10 @@ class SignUpPinCard extends React.Component {
           padding: 40,
         }}
       >
-        <Form style={{ marginTop: 86 }}>
-          <Typography>
+        <Form style={{ marginTop: 16 }}>
+          <CardTitle style={{ textAlign: 'center', marginBottom: 24 }}>
             Please enter a 4 digit code sent to your phone
-          </Typography>
+          </CardTitle>
           <Center>
             <ReactCodeInput type="text" fields={4} {...props} />
           </Center>

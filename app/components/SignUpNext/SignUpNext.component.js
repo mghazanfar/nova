@@ -1,8 +1,9 @@
 import React from 'react';
-import { Card, Typography } from '@material-ui/core';
+import { Card } from '@material-ui/core';
 import { Link, withRouter } from 'react-router-dom';
 import Form from '../ui/Form';
 import ThemedButton from '../ui/ThemedButton';
+import { CardTitle } from '../ui/Texts';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class SignUpNext extends React.Component {
@@ -18,13 +19,15 @@ class SignUpNext extends React.Component {
           padding: 40,
         }}
       >
-        <Form style={{ marginTop: 86 }}>
-          <Typography>Hey there :)</Typography>
-          <Typography>I'm Nova, Welcome to the community.</Typography>
-          <Typography>
+        <Form style={{ marginTop: 48 }}>
+          <CardTitle style={{ marginBottom: 24 }}>Hey there :)</CardTitle>
+          <CardTitle style={{ marginBottom: 24 }}>
+            I'm Nova, Welcome to the community.
+          </CardTitle>
+          <CardTitle style={{ marginBottom: 24 }}>
             Before we continue, let us know if you are legal representative of
             the company.
-          </Typography>
+          </CardTitle>
           <ThemedButton
             bg
             title="I'm the legal representative"

@@ -18,17 +18,19 @@ const SignUpForm = props => (
       padding: 40,
     }}
   >
-    <Form>
-      <Input label="First Name" style={{ marginTop: 16, marginBottom: 16 }} />
-      <Input label="Middle Name" />
-      <Input label="Last Name" />
-      <DatePicker />
-      <PhoneInput />
-      <Input label="Nationality" />
-      <Input label="Company Name" />
-      <Input label="Role in company" />
-      <ThemedButton bg title="Next" component={Link} to="/sign-up-pin" />
-    </Form>
+    <div style={{ maxHeight: 450, overflow: 'auto' }}>
+      <Form>
+        <Input label="First Name" style={{ marginTop: 16, marginBottom: 16 }} />
+        <Input label="Middle Name" />
+        <Input label="Last Name" />
+        <DatePicker />
+        <PhoneInput />
+        <Input label="Nationality" />
+        <Input label="Company Name" />
+        <Input label="Role in company" />
+        <ThemedButton bg title="Next" component={Link} to="/sign-up-pin" />
+      </Form>
+    </div>
   </Card>
 );
 export default SignUpForm;

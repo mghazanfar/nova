@@ -1,15 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
-import TextField from '@material-ui/core/TextField';
 import InputComponent from '../Input';
 
 const styles = theme => ({
   container: {
     display: 'flex',
-    flexWrap: 'wrap',
     alignItems: 'center',
   },
   textField: {
@@ -66,7 +63,6 @@ class OutlinedTextFields extends React.Component {
               className: classes.menu,
             },
           }}
-          helperText="Please select your currency"
           margin="normal"
           variant="outlined"
         >
@@ -76,7 +72,11 @@ class OutlinedTextFields extends React.Component {
             </MenuItem>
           ))}
         </InputComponent>
-        <InputComponent placeholder="Phone number" />
+        <InputComponent
+          placeholder="Phone number"
+          mb0
+          style={{ width: '78%' }}
+        />
       </form>
     );
   }

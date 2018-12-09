@@ -1,8 +1,9 @@
 import React from 'react';
-import { Card, Typography } from '@material-ui/core';
+import { Card } from '@material-ui/core';
 import { Link, withRouter } from 'react-router-dom';
 import Form from '../ui/Form';
 import ThemedButton from '../ui/ThemedButton';
+import { CardTitle } from '../ui/Texts';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class ResetPasswordCard extends React.Component {
@@ -18,11 +19,13 @@ class ResetPasswordCard extends React.Component {
           padding: 40,
         }}
       >
-        <Form style={{ marginTop: 86 }}>
-          <Typography>A reset password link is sent to {email}</Typography>
-          <Typography>
+        <Form style={{ marginTop: 48 }}>
+          <CardTitle style={{ marginBottom: 24 }}>
+            A reset password link is sent to {email}
+          </CardTitle>
+          <CardTitle style={{ marginBottom: 24 }}>
             Please check your email including your spam folder
-          </Typography>
+          </CardTitle>
           <ThemedButton bg title="Back to sign in" component={Link} to="/" />
         </Form>
       </Card>

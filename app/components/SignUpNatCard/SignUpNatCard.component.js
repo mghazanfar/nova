@@ -25,7 +25,7 @@ class ForgotPasswordCard extends React.Component {
           padding: 40,
         }}
       >
-        <Form style={{ marginTop: 86 }}>
+        <Form style={{ marginTop: 48 }}>
           <Input
             label="Nat ID"
             onChange={e => this.setState({ email: e.target.value })}
