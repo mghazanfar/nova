@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from '@material-ui/core';
+import { Card, withMobileDialog } from '@material-ui/core';
 import Form from '../ui/Form';
 import ThemedButton from '../ui/ThemedButton';
 import Input from '../ui/Input';
@@ -15,9 +15,10 @@ class ForgotPasswordCard extends React.Component {
 
   render() {
     const { email } = this.state;
+    const { fullScreen } = this.props;
     return (
       <Card
-        elevation={5}
+        elevation={fullScreen ? 0 : 5}
         style={{
           minHeight: 500,
           justifyContent: 'center',
@@ -44,4 +45,4 @@ class ForgotPasswordCard extends React.Component {
   }
 }
 
-export default ForgotPasswordCard;
+export default withMobileDialog()(ForgotPasswordCard);

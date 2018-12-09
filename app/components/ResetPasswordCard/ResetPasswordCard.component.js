@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from '@material-ui/core';
+import { Card, withMobileDialog } from '@material-ui/core';
 import { Link, withRouter } from 'react-router-dom';
 import Form from '../ui/Form';
 import ThemedButton from '../ui/ThemedButton';
@@ -9,9 +9,10 @@ import { CardTitle } from '../ui/Texts';
 class ResetPasswordCard extends React.Component {
   render() {
     const { email } = this.props.match.params;
+    const { fullScreen } = this.props;
     return (
       <Card
-        elevation={5}
+        elevation={fullScreen ? 0 : 5}
         style={{
           minHeight: 500,
           justifyContent: 'center',
@@ -33,4 +34,4 @@ class ResetPasswordCard extends React.Component {
   }
 }
 
-export default withRouter(ResetPasswordCard);
+export default withRouter(withMobileDialog()(ResetPasswordCard));

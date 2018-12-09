@@ -5,7 +5,6 @@ export const FiftyBetween = styled.div`
   width: 50%;
   align-items: center;
   justify-content: space-between;
-  margin-top: 28px;
 `;
 
 export const Flex = styled.div`

@@ -7,10 +7,10 @@ import Typography from '@material-ui/core/Typography';
 function SimpleAppBar(props) {
   return (
     <Hidden mdDown>
-      <AppBar position="static" color="default">
+      <AppBar position="static" color="inherit">
         <Toolbar>
-          <Typography variant="h6" color="inherit">
-            Nova
+          <Typography style={{ color: '#1e3459', fontSize: 48 }}>
+            NOVA
           </Typography>
         </Toolbar>
       </AppBar>

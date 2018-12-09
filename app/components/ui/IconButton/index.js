@@ -24,14 +24,18 @@ const ThemedIconButton = props => {
   };
   return (
     <IconButton onClick={() => handleClick()}>
-      <Center
-        style={{
-          border: '1px solid #1e3459',
-          borderRadius: 50,
-        }}
-      >
-        {icon}
-      </Center>
+      {!back && !forward ? (
+        icon
+      ) : (
+        <Center
+          style={{
+            border: '1px solid #1e3459',
+            borderRadius: 50,
+          }}
+        >
+          {icon}
+        </Center>
+      )}
     </IconButton>
   );
 };

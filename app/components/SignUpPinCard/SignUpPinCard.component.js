@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from '@material-ui/core';
+import { Card, withMobileDialog } from '@material-ui/core';
 import { Link, withRouter } from 'react-router-dom';
 import ReactCodeInput from 'react-code-input';
 import Form from '../ui/Form';
@@ -11,14 +11,15 @@ const props = {
     fontFamily: 'monospace',
     margin: '4px',
     MozAppearance: 'textfield',
-    width: '15px',
-    borderRadius: '3px',
-    fontSize: '14px',
-    height: '26px',
+    width: '65px',
+    borderRadius: '6px',
+    fontSize: '21px',
+    height: '65px',
     paddingLeft: '7px',
     backgroundColor: 'white',
-    color: 'lightskyblue',
-    border: '1px solid lightskyblue',
+    color: '#1e3459',
+    border: '1px solid #9b9b9b',
+    textAlign: 'center',
   },
   inputStyleInvalid: {
     fontFamily: 'monospace',
@@ -38,9 +39,10 @@ const props = {
 class SignUpPinCard extends React.Component {
   render() {
     const { email } = this.props.match.params;
+    const { fullScreen } = this.props;
     return (
       <Card
-        elevation={5}
+        elevation={fullScreen ? 0 : 5}
         style={{
           minHeight: 500,
           justifyContent: 'center',
@@ -52,7 +54,7 @@ class SignUpPinCard extends React.Component {
           <CardTitle style={{ textAlign: 'center', marginBottom: 24 }}>
             Please enter a 4 digit code sent to your phone
           </CardTitle>
-          <Center>
+          <Center style={{ marginBottom: 24 }}>
             <ReactCodeInput type="text" fields={4} {...props} />
           </Center>
           <ThemedButton bg title="Enter" component={Link} to="/" />
@@ -62,4 +64,4 @@ class SignUpPinCard extends React.Component {
   }
 }
 
-export default withRouter(SignUpPinCard);
+export default withRouter(withMobileDialog()(SignUpPinCard));
