@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Card } from '@material-ui/core';
+import { Card, withMobileDialog } from '@material-ui/core';
 import Form from '../ui/Form';
 import ThemedButton from '../ui/ThemedButton';
 import Input from '../ui/Input';
@@ -20,7 +20,7 @@ const SignUpForm = props => {
         padding: 40,
       }}
     >
-      <div style={{ maxHeight: 450, overflow: 'auto' }}>
+      <div style={{ maxHeight: !fullScreen && 450, overflow: 'auto' }}>
         <Form>
           <Input
             label="First Name"
@@ -39,4 +39,4 @@ const SignUpForm = props => {
     </Card>
   );
 };
-export default SignUpForm;
+export default withMobileDialog()(SignUpForm);

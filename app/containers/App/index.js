@@ -19,16 +19,17 @@ import SignUpPin from 'containers/SignUpPin/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import ResetPassword from 'containers/ResetPassword';
 
-import { Grid } from '@material-ui/core';
+import { Grid, withMobileDialog } from '@material-ui/core';
 import ForgotPassword from '../ForgotPassword';
 import AppbarComponent from '../../components/Appbar';
 import Footer from '../../components/CommonFooter';
 import { AppWrapper } from './App.style';
 import { Flex1 } from '../../components/ui/ResponsiveRelated';
 
-export default function App() {
+const App = props => {
+  const { fullScreen } = props;
   return (
-    <AppWrapper>
+    <AppWrapper fullScreen={fullScreen}>
       <AppbarComponent />
       <Flex1>
         <Grid container justify="center">
@@ -50,4 +51,5 @@ export default function App() {
       <Footer />
     </AppWrapper>
   );
-}
+};
+export default withMobileDialog()(App);
