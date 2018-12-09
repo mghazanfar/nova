@@ -11,15 +11,15 @@
 
 import React, { Fragment } from 'react';
 import CommonHeader from '../../components/CommonHeader';
-import SignInCard from '../../components/SignInCard';
+import ForgotPasswordCard from '../../components/ForgotPasswordCard';
 
 /* eslint-disable react/prefer-stateless-function */
-export default class HomePage extends React.PureComponent {
+export default class ForgotPassword extends React.PureComponent {
   render() {
     return (
       <Fragment>
         <CommonHeader title="Sign in" />
-        <SignInCard />
+        <ForgotPasswordCard />
       </Fragment>
     );
   }
