@@ -18,6 +18,7 @@ const SignUpForm = props => {
         justifyContent: 'center',
         display: 'flex',
         padding: 40,
+        boxShadow: !fullScreen && '0 2px 9px 0 rgba(134, 134, 134, 0.3)',
       }}
     >
       <div style={{ maxHeight: !fullScreen && 450, overflow: 'auto' }}>
