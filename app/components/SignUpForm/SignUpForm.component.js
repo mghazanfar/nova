@@ -26,7 +26,7 @@ const SignUpForm = props => (
       <Input label="Nationality" />
       <Input label="Company Name" />
       <Input label="Role in company" />
-      <ThemedButton bg title="Next" component={Link} to="/" />
+      <ThemedButton bg title="Next" component={Link} to="/sign-up-pin" />
     </Form>
   </Card>
 );

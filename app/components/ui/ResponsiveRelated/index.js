@@ -18,3 +18,8 @@ export const Flex1 = styled.div`
 export const SpaceBetween = styled(Flex)`
   justify-content: space-between;
 `;
+
+export const Center = styled(Flex)`
+  justify-content: center;
+  align-items: center;
+`;

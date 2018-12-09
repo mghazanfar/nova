@@ -15,6 +15,7 @@ import SignUp from 'containers/SignUp/Loadable';
 import SignUpNext from 'containers/SignUpNext/Loadable';
 import SignUpNat from 'containers/SignUpNat/Loadable';
 import SignUpForm from 'containers/SignUpForm/Loadable';
+import SignUpPin from 'containers/SignUpPin/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import ResetPassword from 'containers/ResetPassword';
 
@@ -38,6 +39,7 @@ export default function App() {
               <Route exact path="/sign-up-next" component={SignUpNext} />
               <Route exact path="/sign-up-nat" component={SignUpNat} />
               <Route exact path="/sign-up-form" component={SignUpForm} />
+              <Route exact path="/sign-up-pin" component={SignUpPin} />
               <Route path="/forgot-password" component={ForgotPassword} />
               <Route path="/reset-password/:email" component={ResetPassword} />
               <Route component={NotFoundPage} />

@@ -14,9 +14,10 @@ const styles = theme => ({
 });
 
 const ThemedIconButton = props => {
-  const { back, onClick, icon } = props;
+  const { back, onClick, icon, forward } = props;
   const handleClick = () => {
     back && props.history.goBack();
+    forward && props.history.goForward();
     onClick && onClick();
   };
   return <IconButton onClick={() => handleClick()}>{icon}</IconButton>;

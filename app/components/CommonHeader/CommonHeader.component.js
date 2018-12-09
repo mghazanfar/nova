@@ -9,7 +9,7 @@ const CommonHeader = props => (
   <FiftyBetween>
     <SpaceBetween style={{ minWidth: 100 }}>
       <IconButton icon={<ChevronLeft />} back />
-      <IconButton icon={<ChevronRight />} />
+      <IconButton icon={<ChevronRight />} forward />
     </SpaceBetween>
     <Typography>{props.title}</Typography>
   </FiftyBetween>
