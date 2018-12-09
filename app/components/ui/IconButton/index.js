@@ -1,6 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { withStyles, IconButton } from '@material-ui/core';
+import { Center } from '../ResponsiveRelated';
+
 const styles = theme => ({
   button: {
     margin: theme.spacing.unit,
@@ -20,7 +22,18 @@ const ThemedIconButton = props => {
     forward && props.history.goForward();
     onClick && onClick();
   };
-  return <IconButton onClick={() => handleClick()}>{icon}</IconButton>;
+  return (
+    <IconButton onClick={() => handleClick()}>
+      <Center
+        style={{
+          border: '1px solid #1e3459',
+          borderRadius: 50,
+        }}
+      >
+        {icon}
+      </Center>
+    </IconButton>
+  );
 };
 
 export default withStyles(styles)(withRouter(ThemedIconButton));

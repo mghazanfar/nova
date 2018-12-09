@@ -34,11 +34,11 @@ class Input extends React.PureComponent {
   };
 
   render() {
-    const { classes, label, showHide } = this.props;
+    const { classes, label, showHide, mb0 } = this.props;
     const { type } = this.state;
     return (
       <TextField
-        style={{ marginBottom: 16 }}
+        style={{ marginBottom: !mb0 && 18 }}
         InputLabelProps={{
           classes: {
             root: classes.cssLabel,

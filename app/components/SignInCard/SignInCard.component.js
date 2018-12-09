@@ -10,17 +10,18 @@ import ThemedLink from '../ui/Label/ThemedLink';
 
 const SignInCard = props => (
   <Card
-    elevation={12}
+    elevation={5}
     style={{
       minHeight: 500,
       alignItems: 'center',
       justifyContent: 'center',
       display: 'flex',
+      padding: 40,
     }}
   >
     <Form>
       <Input label="Email" />
-      <Input label="Password" showHide type="password" />
+      <Input label="Password" showHide type="password" mb0 />
       <ThemedCheckBox
         label={
           <Label>
@@ -31,7 +32,9 @@ const SignInCard = props => (
           </Label>
         }
       />
-      <ThemedButton bg title="Sign In" />
+      <div style={{ marginTop: 19, width: '100%' }}>
+        <ThemedButton bg title="Sign In" />
+      </div>
       <ThemedButton
         outlined
         title="I'm new to Nova"

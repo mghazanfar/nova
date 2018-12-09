@@ -9,7 +9,7 @@ const styles = theme => ({
     margin: theme.spacing.unit,
     marginLeft: 0,
     marginRight: 0,
-    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    background: 'linear-gradient(45deg, #fa4866 30%, #ff8e74 90%)',
     border: 0,
     color: 'white',
     height: 30,
@@ -27,23 +27,24 @@ function FloatingActionButtons(props) {
       className={classes.fab}
       style={{
         background: !bg && 'transparent',
-        border: outlined && '1px solid #FF8E53',
-        color: (outlined || link) && '#FF8E53',
+        border: outlined && '1px solid #ff4b4d',
+        color: (outlined || link) && '#ff6f68',
         boxShadow: (outlined || link) && '0 3px 5px 2px rgba(0,0,0,0)',
+        width: '100%',
       }}
       {...props}
     >
-      {title}
+      <b>{title}</b>
     </Fab>
   ) : (
     <Button
       style={{
-        color: '#FF8E53',
+        color: '#ff6f68',
         borderRadius: 24,
       }}
       {...props}
     >
-      {title}
+      <b>{title}</b>
     </Button>
   );
 }

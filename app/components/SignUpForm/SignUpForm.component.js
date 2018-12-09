@@ -9,12 +9,13 @@ import PhoneInput from '../ui/PhoneInput';
 
 const SignUpForm = props => (
   <Card
-    elevation={12}
+    elevation={5}
     style={{
       minHeight: 500,
       alignItems: 'center',
       justifyContent: 'center',
       display: 'flex',
+      padding: 40,
     }}
   >
     <Form>

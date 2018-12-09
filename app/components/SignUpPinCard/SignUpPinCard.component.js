@@ -39,11 +39,12 @@ class SignUpPinCard extends React.Component {
     const { email } = this.props.match.params;
     return (
       <Card
-        elevation={12}
+        elevation={5}
         style={{
           minHeight: 500,
           justifyContent: 'center',
           display: 'flex',
+          padding: 40,
         }}
       >
         <Form style={{ marginTop: 86 }}>

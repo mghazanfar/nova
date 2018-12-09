@@ -7,26 +7,28 @@ import ThemedCheckBox from '../ui/ThemedCheckBox';
 import Input from '../ui/Input';
 import Label from '../ui/Label';
 import ThemedLink from '../ui/Label/ThemedLink';
+import { CardTitle, CardSubtitle } from '../ui/Texts';
 
 const SignUpCard = props => (
   <Card
-    elevation={12}
+    elevation={5}
     style={{
       minHeight: 500,
       alignItems: 'center',
       justifyContent: 'center',
       display: 'flex',
+      padding: 40,
     }}
   >
-    <Form>
-      <Typography>
+    <Form style={{ marginTop: 32 }}>
+      <CardTitle>
         Be the first to know when we launch evva business account.
-      </Typography>
-      <Typography style={{ marginBottom: 16 }}>
+      </CardTitle>
+      <CardSubtitle style={{ marginBottom: 32 }}>
         Meanwhile you will get prime access to our series, workshops and events
-      </Typography>
+      </CardSubtitle>
       <Input label="Email" />
-      <Input label="Password" showHide type="password" />
+      <Input label="Password" showHide type="password" mb0 />
       <ThemedCheckBox
         label={
           <Label>
